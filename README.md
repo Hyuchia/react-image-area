@@ -10,18 +10,20 @@
 
 ## :books: Table of Contents
 
--   [Installation](#package-installation)
--   [Usage](#rocket-usage)
--   [Features](#key-features)
--   [Docs](#notebook-docs)
--   [Support](#hammer_and_wrench-support)
--   [Contributing](#memo-contributing)
--   [License](#scroll-license)
+- [react-image-area](#react-image-area)
+  - [:books: Table of Contents](#books-table-of-contents)
+  - [:package: Installation](#package-installation)
+  - [:rocket: Usage](#rocket-usage)
+  - [:key: Features](#key-features)
+  - [:notebook: Docs](#notebook-docs)
+  - [:hammer\_and\_wrench: Support](#hammer_and_wrench-support)
+  - [:memo: Contributing](#memo-contributing)
+  - [:scroll: License](#scroll-license)
 
 ## :package: Installation
 
 ```bash
-npm i @bmunozg/react-image-area
+yarn add @hyuchia/react-image-area
 ```
 
 ## :rocket: Usage
@@ -29,7 +31,7 @@ npm i @bmunozg/react-image-area
 > Usage with types
 
 ```jsx
-import { AreaSelector, IArea } from '@bmunozg/react-image-area'
+import { AreaSelector, IArea } from '@hyuchia/react-image-area'
 
 const ExampleComponent = () => {
     const [areas, setAreas] = useState<IArea[]>([]);
@@ -227,7 +229,7 @@ const ExampleComponent = () => {
 ## :hammer_and_wrench: Support
 
 Please
-[open an issue](https://github.com/ByronMunozG/react-image-area/issues/new) for
+[open an issue](https://github.com/Hyuchia/react-image-area/issues/new) for
 support.
 
 ## :memo: Contributing
@@ -235,8 +237,8 @@ support.
 Please contribute using
 [Github Flow](https://guides.github.com/introduction/flow/). Create a branch,
 add commits, and
-[open a pull request](https://github.com/ByronMunozG/react-image-area/compare/).
+[open a pull request](https://github.com/Hyuchia/react-image-area/compare/).
 
 ## :scroll: License
 
-[MIT](LICENSE) © [ByronMunozG](https://github.com/ByronMunozG)
+[MIT](LICENSE) © [Hyuchia](https://github.com/Hyuchia)

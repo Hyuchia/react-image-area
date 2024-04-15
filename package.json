@@ -1,10 +1,10 @@
 {
-  "name": "@bmunozg/react-image-area",
+  "name": "@hyuchia/react-image-area",
   "description": "React component to select multiple areas/regions of images.",
-  "author": "Byron Muñoz G. <byron.munoz.godoy@gmail.com> (https://github.com/ByronMunozG)",
+  "author": "Diana Islas Ocampo <dev@hyuchia.com>",
   "license": "MIT",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -58,12 +58,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ByronMunozG/react-image-area.git"
+    "url": "https://github.com/Hyuchia/react-image-area.git"
   },
   "bugs": {
-    "url": "https://github.com/ByronMunozG/react-image-area/issues"
+    "url": "https://github.com/Hyuchia/react-image-area/issues"
   },
-  "homepage": "https://ByronMunozG.github.io/react-image-area",
+  "homepage": "https://hyuchia.github.io/react-image-area",
   "publishConfig": {
     "access": "public"
   },

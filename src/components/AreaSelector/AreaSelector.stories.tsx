@@ -11,31 +11,34 @@ type AreaStory = {
   unit: IPropUnit;
 };
 
-export const AreaSelectExample: Story<AreaStory> = ({ maxAreas, debug, customRenderExampleText, unit }) => {
+export const AreaSelectExample: Story<AreaStory> = ({
+  maxAreas,
+  debug,
+  customRenderExampleText,
+  unit,
+}) => {
   const [areas, setAreas] = useState<IArea[]>([]);
 
-    const customRender: CustomAreaRenderer = (areaProps) => {
-      if (!areaProps.isChanging) {
-        return (
-          <div key={areaProps.areaNumber}>
-              {customRenderExampleText} - {areaProps.areaNumber}
-              <button
-                style={{
-                  position: 'absolute',
-                  bottom: '-30px',
-                  left: '50%',
-                  transform: 'translateX(-50%)'
-                }}
-                onClick={() =>
-                  areaProps.removeArea(areaProps.areaNumber - 1)
-                }
-            >
-              remove
-            </button>
-          </div>
-        );
-      }
-    };
+  const customRender: CustomAreaRenderer = (areaProps) => {
+    if (!areaProps.isChanging) {
+      return (
+        <div key={areaProps.areaNumber}>
+          {customRenderExampleText} - {areaProps.areaNumber}
+          <button
+            style={{
+              position: 'absolute',
+              bottom: '-30px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+            }}
+            onClick={() => areaProps.removeArea(areaProps.areaNumber - 1)}
+          >
+            remove
+          </button>
+        </div>
+      );
+    }
+  };
 
   const onChangeHandler = (areas: IArea[]) => setAreas(areas);
 
@@ -46,12 +49,12 @@ export const AreaSelectExample: Story<AreaStory> = ({ maxAreas, debug, customRen
       maxAreas={maxAreas}
       debug={debug}
       wrapperStyle={{
-        border: '2px solid black'
+        border: '2px solid black',
       }}
       globalAreaStyle={{
         border: '1.5px dashed blue',
         backgroundColor: 'lightblue',
-        opacity: '0.5'
+        opacity: '0.5',
       }}
       customAreaRenderer={customRender}
       unit={unit}
@@ -65,12 +68,12 @@ AreaSelectExample.storyName = 'Area Select';
 AreaSelectExample.args = {
   maxAreas: 1,
   debug: true,
-  customRenderExampleText: 'test'
+  customRenderExampleText: 'test',
 };
 AreaSelectExample.argTypes = {
   unit: {
     options: ['pixel', 'percentage'],
     control: { type: 'select' },
-    defaultValue: 'pixel'
-  }
+    defaultValue: 'pixel',
+  },
 };

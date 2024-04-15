@@ -24,23 +24,20 @@ export const Area: FunctionComponent<IAreaProps> = ({
     top: `${area.y}${area.unit}`,
     left: `${area.x}${area.unit}`,
     width: `${area.width}${area.unit}`,
-    height: `${area.height}${area.unit}`
+    height: `${area.height}${area.unit}`,
   };
 
   const style = {
     ...styles,
     ...localStyle,
     ...globalAreaStyle,
-    ...area.areaStyle
+    ...area.areaStyle,
   };
 
   return (
-    <div
-      style={style}
-      onPointerDown={onCropStart}
-      data-wrapper="wrapper"
-    >
-      {customAreaRenderer && customAreaRenderer({ ...area, areaNumber, removeArea })}
+    <div style={style} onPointerDown={onCropStart} data-wrapper="wrapper">
+      {customAreaRenderer &&
+        customAreaRenderer({ ...area, areaNumber, removeArea })}
       {showHandles && <Handles />}
     </div>
   );
