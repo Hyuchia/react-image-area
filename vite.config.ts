@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import pkg from './package.json';
 import reactPlugin from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import { terser } from 'rollup-plugin-terser';
@@ -36,7 +35,6 @@ export default defineConfig(({ command }) => {
             },
             rollupOptions: {
                 external: [
-                    ...Object.keys(pkg.peerDependencies),
                     /\.stories\.tsx?$/
                     // add dependecies if exist
                 ],
